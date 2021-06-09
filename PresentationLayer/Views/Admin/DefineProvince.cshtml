@@ -1,0 +1,390 @@
+﻿@{ Layout = "~/Views/Shared/adminMasterView.cshtml"; }
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Introduction</title>
+
+    <link href="~/adminCss/assets/jquery-ui.css" rel="stylesheet" />
+
+</head>
+<body>
+
+
+    <div class="page-content-wrapper">
+        <!-- BEGIN CONTENT BODY -->
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+
+
+            <div class="alert alert-danger" id="delete" style="display:none;">
+
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
+                <strong>Deleted!</strong> Record Deleted Successfully.
+
+            </div>
+
+
+
+            <div class="page-bar">
+
+                <ul class="page-breadcrumb">
+
+                    <li>
+                        <a href="index.html">Dasboard</a>
+                        <i class="fa fa-circle"></i>
+                    </li>
+                    <li>
+                        <a href="#">Introduction</a>
+                        <i class="fa fa-circle"></i>
+                    </li>
+                </ul>
+                <div class="page-toolbar">
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown">
+                            Actions
+                            <i class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li>
+                                <a href="#">
+                                    <i class="icon-bell"></i> Action
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-shield"></i> Another action
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-user"></i> Something else here
+                                </a>
+                            </li>
+                            <li class="divider"> </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-bag"></i> Separated link
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- END PAGE BAR -->
+            <!-- BEGIN PAGE TITLE-->
+
+            <h3 class="page-title">
+                PAGE LIST
+
+                <small>INFORMATION</small>
+
+            </h3>
+
+            <!-- END PAGE TITLE-->
+            <!-- END PAGE HEADER-->
+
+            <div class="m-heading-1 border-green m-bordered">
+
+                <form id="Userform">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+
+                                <div class="x_content" style="margin-top: 50px;">
+                                    <div class="col-sm-6 col-md-6 col-xs-12 form-group">
+                                        <input type="text" class="form-control has-feedback-left" id="TxtProvinceName" required placeholder="Enter Countries Name" />
+                                        <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-xs-12 form-group">
+                                        <input type="submit" class="btn btn-success" value="SAVE RECORD">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <!-- BEGIN EXAMPLE TABLE PORTLET-->
+
+                    <div class="portlet light bordered">
+
+                        <div class="portlet-title">
+
+                            <div class="caption font-dark">
+
+                                <i class="icon-settings font-dark"></i>
+
+                                <span class="caption-subject bold uppercase">Column Reordering</span>
+
+                            </div>
+
+                            <div class="tools"> </div>
+                        </div>
+
+                        <div class="portlet-body">
+                            <table class="table table-striped table-bordered table-hover" id="deathTable">
+                                <thead>
+                                    <tr>
+
+
+                                        <td>ID</td>
+
+                                        <td>Details</td>
+                                        <td>Action</td>
+                                        <td hidden>ID</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- END CONTENT BODY -->
+
+    </div>
+
+    <div id="ModalEdit" class="modal fade" aria-hidden="false" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <label id="lblId" style="display:none"></label>
+                <div class="modal-body">
+
+
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+
+                        <label for="TxtTitle">
+                            Province Name <span class="required"></span>
+                        </label>
+                        <input type="text" class="form-control" required="required" placeholder="Type Name" id="EditName">
+
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                    </div>
+                    <div class="ln_solid "></div>
+
+
+                </div>
+
+
+
+                <div class="modal-footer menu-well-padding">
+                    <input type="button" id="btnUpdate" class="btn btn-success" value="Update Record" />
+                    <input type="button" name="ss" data-dismiss="modal" class="btn btn-success" value="Cancel" />
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <link href="~/adminCss/assets/jquery-ui.js" rel="stylesheet" />
+    <script src="~/js/plugins/jquery-1.12.3.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/js/plugins/bootstrap.min.js"></script>
+    <script src="~/toast/toastr.min.js"></script>
+    <script src="~/DataManager/AjaxHandler.js"></script>
+    <script src="~/DataManager/Validate.js"></script>
+    <script>$(function () {
+            FnLoadData();
+            $('#Userform').submit(function () {
+
+                FnInsertProvince();
+                return false;
+            });
+            $("#btnUpdate").click(function () {
+                FnUpdateRecord();
+            });
+
+        });
+
+        //Insert Provinces Function
+        function FnInsertProvince() {
+            Action([
+
+                { "name": "ProvinceName", "Value": $("#TxtProvinceName").val() }
+            ], "[Provinces_Insert]");
+
+        }
+
+        //Function Result calls  after SignUp
+
+        function Result(text) {
+            console.log(text);
+            if (text == 'Operation Successfully Performed') {
+                toastr["success"](text, 'Success Message!');
+                clearTextBox();
+                FnLoadData();
+            }
+            else if (text != 'Operation Successfully Performed') {
+                toastr["error"](text, 'Error Message');
+            }
+        }
+
+
+        //Function for clearing the textboxes
+
+        function clearTextBox() {
+            $('#TxtProvinceName').val("");
+            $('#TxtProvinceName').focus();
+
+
+
+
+        }
+        //Retreiving Provinces Function
+        var table;
+        function FnLoadData() {
+
+            var param = [];
+            var proc = '[Provinces_Data]';
+            Selector1(param, proc).then(function (result) {
+                $res = JSON.parse(result);
+
+                $("#deathTable").DataTable().destroy();
+                $("#deathTable tbody").empty();
+
+                var index = 1;
+                for (var i = 0; i < $res.length; i++) {
+                    var rows = "";
+
+                    rows += "<td  style='font-weight: bold'>" + index +
+                        "<td style='display:none'>" + $res[i].Province_ID +
+                        "<td>" + $res[i].Province_Name +
+                        "</td><td style='cursor:pointer'><a onclick='Edit(this)' class='btn btn-warning btn-xs'>EDIT</a><a  class='btn btn-danger btn-xs' onclick='d(this)'>Delete</a></td>"
+
+
+
+                    var tbody = document.querySelector("#deathTable tbody");
+                    var tr = document.createElement("tr");
+                    tr.innerHTML = rows;
+                    tbody.appendChild(tr);
+                    index++;
+
+
+
+
+                }
+                // $('#tableFIR').DataTable();
+
+                //$('#cgrid').show();
+                table = $("#deathTable").DataTable({
+
+                    "iDisplayLength": 25,
+                    dom: "Bfrtip",
+                    buttons: [
+                        {
+                            extend: "copy",
+                            className: "btn-sm"
+                        },
+                        {
+                            extend: "csv",
+                            className: "btn-sm"
+                        },
+                        {
+                            extend: "excel",
+                            className: "btn-sm"
+                        },
+                        {
+                            extend: "pdfHtml5",
+                            className: "btn-sm"
+                        },
+                        {
+                            extend: "print",
+                            className: "btn-sm"
+                        },
+                    ],
+
+                });
+
+
+
+                TableManageButtons = function () {
+                    "use strict";
+                    return {
+                        init: function () {
+                            handleDataTableButtons();
+                        }
+                    };
+                }();
+
+
+                // barchartnew(ActiveUsers, InActiveUsers);
+                table.on('search.dt', function () {
+                    var data = table.rows({ filter: 'applied' }).data();
+                    summaryFilter(data);
+                });
+                table.on('order.dt', function () {
+                    var data = table.rows({ filter: 'applied' }).data();
+                    summaryFilter(data);
+                });
+                summaryFilter(table.rows().data());
+            });
+
+        }
+
+
+
+        function summaryFilter(data) {
+
+
+        }
+
+        var tr;
+        function d(ele) {
+            tr = $(ele).closest('tr');
+
+            Action([
+                { "name": "Id", "value": tr.children('td:eq(1)').html() }
+
+            ], "[Province_Delete]");
+
+        }
+
+        function Edit(ele) {
+
+
+            $("#lblId").text($(ele).closest("tr").find("td:eq(1)").text());
+            $("#EditName").val($(ele).closest("tr").find("td:eq(2)").text());
+
+            $("#ModalEdit").modal('show');
+
+        }
+        function FnUpdateRecord() {
+
+
+            Action([
+                { "name": "RecordId", "Value": $("#lblId").text() },
+                { "name": "ProvinceName", "Value": $("#EditName").val() }], "[Province_Updataion]");
+            $("#ModalEdit").modal('hide');
+            $("#EditName").focus();
+
+        }</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+/Users/fayazkhan/Projects/Vistual Studio/DTS Projects/DTSWebsiteCore/DataAccessLayer/bin/Debug/netstandard2.1/DataAccessLayer.deps.json
+/Users/fayazkhan/Projects/Vistual Studio/DTS Projects/DTSWebsiteCore/DataAccessLayer/bin/Debug/netstandard2.1/DataAccessLayer.dll
+/Users/fayazkhan/Projects/Vistual Studio/DTS Projects/DTSWebsiteCore/DataAccessLayer/bin/Debug/netstandard2.1/DataAccessLayer.pdb
+/Users/fayazkhan/Projects/Vistual Studio/DTS Projects/DTSWebsiteCore/DataAccessLayer/obj/Debug/netstandard2.1/DataAccessLayer.csprojAssemblyReference.cache
+/Users/fayazkhan/Projects/Vistual Studio/DTS Projects/DTSWebsiteCore/DataAccessLayer/obj/Debug/netstandard2.1/DataAccessLayer.AssemblyInfoInputs.cache
+/Users/fayazkhan/Projects/Vistual Studio/DTS Projects/DTSWebsiteCore/DataAccessLayer/obj/Debug/netstandard2.1/DataAccessLayer.AssemblyInfo.cs
+/Users/fayazkhan/Projects/Vistual Studio/DTS Projects/DTSWebsiteCore/DataAccessLayer/obj/Debug/netstandard2.1/DataAccessLayer.csproj.CoreCompileInputs.cache
+/Users/fayazkhan/Projects/Vistual Studio/DTS Projects/DTSWebsiteCore/DataAccessLayer/obj/Debug/netstandard2.1/DataAccessLayer.dll
+/Users/fayazkhan/Projects/Vistual Studio/DTS Projects/DTSWebsiteCore/DataAccessLayer/obj/Debug/netstandard2.1/DataAccessLayer.pdb

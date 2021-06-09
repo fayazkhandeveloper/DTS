@@ -1,0 +1,207 @@
+﻿@{ Layout = "~/Views/Shared/adminMasterView.cshtml"; }
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vision</title>
+</head>
+<!-- BEGIN PAGE BAR -->
+
+
+
+
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content">
+        <!-- BEGIN PAGE HEADER-->
+
+
+        <div class="alert alert-danger" id="delete" style="display:none;">
+
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
+            <strong>Deleted!</strong> Record Deleted Successfully.
+
+        </div>
+
+
+
+        <div class="page-bar">
+
+            <ul class="page-breadcrumb">
+
+                <li>
+                    <a href="index.php">Dashboard</a>
+                    <i class="fa fa-circle"></i>
+                </li>
+                <li>
+                    <a href="#">Vision</a>
+                    <i class="fa fa-circle"></i>
+                </li>
+
+            </ul>
+
+            <!--   <div class="page-toolbar">
+
+                  <div class="btn-group pull-right">
+
+                      <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+
+                          <i class="fa fa-angle-down"></i>
+
+                      </button>
+
+                      <ul class="dropdown-menu pull-right" role="menu">
+
+                          <li>
+
+                              <a href="#">
+
+                                  <i class="icon-bell"></i> Action</a>
+
+                          </li>
+
+                          <li>
+
+                              <a href="#">
+
+                                  <i class="icon-shield"></i> Another action</a>
+
+                          </li>
+
+                          <li>
+
+                              <a href="#">
+
+                                  <i class="icon-user"></i> Something else here</a>
+
+                          </li>
+
+                          <li class="divider"> </li>
+
+                          <li>
+
+                              <a href="#">
+
+                                  <i class="icon-bag"></i> Separated link</a>
+
+                          </li>
+
+                      </ul>
+
+                  </div>
+
+              </div> -->
+
+        </div>
+
+        <!-- END PAGE BAR -->
+        <!-- BEGIN PAGE TITLE-->
+
+        <h3 class="page-title">
+            PAGE LIST
+
+            <small>INFORMATION</small>
+
+        </h3>
+
+        <!-- END PAGE TITLE-->
+        <!-- END PAGE HEADER-->
+
+        <div class="m-heading-1 border-green m-bordered">
+            <div class="btn-group">
+                <a class="btn sbold green" href="vision_add.php"> Add New Vision </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                <div class="portlet light bordered">
+
+                    <div class="portlet-title">
+
+                        <div class="caption font-dark">
+
+                            <i class="icon-settings font-dark"></i>
+
+                            <span class="caption-subject bold uppercase">Column Reordering</span>
+
+                        </div>
+
+                        <div class="tools"> </div>
+
+
+
+
+
+                    </div>
+
+                    <div class="portlet-body">
+
+                        <table class="table table-striped table-bordered table-hover" id="sample_1">
+
+                            <thead>
+                                <tr>
+                                    <td>Header</td>
+                                    <td>Details</td>
+                                    <td>Action</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr class="odd gradeX">
+                                    <td>Mehmood Khan (Chief Minister KPK)</td>
+                                    <td>
+
+                                        Khyber Pakhtunkhwa is blessed with an abundance of nature’s wealth. From some of the world’s highest peaks in the Hindukush in the north — to the deserts of the Dera Ismail Khan in the south; and from the historic Khyber Pass in the west to the lovely banks of River Indus at Attock in the east our land has abundant attractions to offer for every type of tourist. Our culture is thousands of years old and , extremely rich. Moreover, our people are exceedingly hospitable; they are warm and courteous and take much delight in entertaining guests. We take great pride in our timeless traditions and values. As inhabitants of a province often called the ‘Land of Hospitality’, I believe that tourism can play the chief role in projecting a positive and friendly image of the region. Since time immemorial, our lofty mountains, scenic valleys and plains, lush forests and meadows, historical monuments and rich traditions have been valued for their beauty. I would like to recommend that you continue surfing our website to find useful and accurate tourism information. I look forward to your feedback so if you have any views or suggestions, please pass them on to us via our feedback form.
+
+
+                                        I warmly welcome you all to the beautiful Khyber Pakhtunkwa.
+                                        Mehmood Khan
+                                        Chief Minister,
+                                        Khyber Pakhtunkhwa
+                                    </td>
+                                    <td>
+                                        <a href="vision_edit.php" class="btn btn-warning btn-xs">EDIT</a><a onclick="return confirm('This will delete Page, continue?')" href="admin/Deletepages" class="btn btn-danger btn-xs">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>Chief Secretary Message</td>
+                                    <td>
+
+                                        Khyber Pakhtunkhwa is blessed with an abundance of nature’s wealth. From some of the world’s highest peaks in the Hindukush in the north — to the deserts of the Dera Ismail Khan in the south; and from the historic Khyber Pass in the west to the lovely banks of River Indus at Attock in the east our land has abundant attractions to offer for every type of tourist. Our culture is thousands of years old and , extremely rich. Moreover, our people are exceedingly hospitable; they are warm and courteous and take much delight in entertaining guests. We take great pride in our timeless traditions and values. As inhabitants of a province often called the ‘Land of Hospitality’, I believe that tourism can play the chief role in projecting a positive and friendly image of the region. Since time immemorial, our lofty mountains, scenic valleys and plains, lush forests and meadows, historical monuments and rich traditions have been valued for their beauty. I would like to recommend that you continue surfing our website to find useful and accurate tourism information. I look forward to your feedback so if you have any views or suggestions, please pass them on to us via our feedback form.
+
+
+                                        I warmly welcome you all to the beautiful Khyber Pakhtunkwa.
+                                        Mehmood Khan
+                                        Chief Minister,
+                                        Khyber Pakhtunkhwa
+                                    </td>
+                                    <td>
+                                        <a href="vision_edit.php" class="btn btn-warning btn-xs">EDIT</a><a onclick="return confirm('This will delete Page, continue?')" href="admin/Deletepages" class="btn btn-danger btn-xs">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- END CONTENT BODY -->
+
+</div>
+<body>
+</body>
+</html>
+

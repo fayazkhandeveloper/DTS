@@ -1,0 +1,133 @@
+nav, ul, li  {margin: 0; text-decoration: none;}
+
+.toggleMenu {
+    display:  none;
+    padding: 0px 15px 0px 0px;
+	width:auto;
+	height:auto;
+}
+.nav {
+	height:auto;
+    list-style: none;
+	float:right;
+	padding-right:20px;
+}
+.nav:before,
+.nav:after {
+    content: " "; 
+    display: table; 
+}
+.nav:after {
+    clear: both;
+}
+.nav ul {
+    list-style: none;
+    width: 9em;
+}
+.nav a {
+	padding:0px 0px 0px 0px;
+}
+.nav li {
+    position: relative;
+	padding-left:20px;
+	
+}
+.nav > li {
+    float: left;
+    /*border-top: 1px solid #104336;*/
+}
+.nav > li > a {
+    display: block;
+}
+.nav > li > .parent {
+    /*background-image: url("images/downArrow.png");*/
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.nav li  ul {
+    /*position: absolute;
+    left: -9999px;*/
+		display: none;
+        position: absolute;
+        top: 100%;
+		list-style-type: none;
+		padding:0px 0px 0px 0px;
+}
+
+.nav > li.hover > ul {
+    left: 0;
+}
+.nav li li.hover ul {
+    left: 100%;
+    top: 0;
+}
+.nav li li a {
+	min-width:200px;
+    display: block;
+    background: #FFF;
+    position: relative;
+    z-index:100;
+    border-bottom: 1px solid #CCC;
+	padding:10px 10px 10px 10px;
+}
+
+.nav li:hover ul
+        {
+            display: block;
+        }
+
+@media screen and (max-width: 700px) {
+nav, ul, li {margin: 0; padding:0; text-decoration: none;}
+    .active {
+        display: block;
+    }
+	.nav {
+		width:100% !important;
+		/*margin-top:5px;*/
+		float:none;
+		padding-right:0px;
+		z-index:1;
+		position:relative;
+		margin:0px;
+}
+.nav li {
+	padding-left:0px;
+	 float: none;
+}
+	.nav a {
+	padding:5px 0px 10px 20px;
+	border-bottom:1px solid #CCC;
+    }
+    .nav ul {
+        display: block;
+        width: 100%;
+    }
+   .nav > li.hover > ul , .nav li li.hover ul {
+        position: static;
+    }
+	
+	
+	
+	
+	.nav li  ul {
+    position: absolute;
+    left: -9999px;
+
+}
+	.nav li li a {
+	width:auto;
+	height:auto;
+    display: block;
+    position: relative;
+    z-index:100;
+    border-bottom: 1px solid #CCC;
+	padding:5px 0px 10px 20px;
+}
+
+.nav li:hover ul
+        {
+            display: block;
+        }
+
+}

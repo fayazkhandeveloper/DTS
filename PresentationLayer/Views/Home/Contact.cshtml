@@ -1,0 +1,122 @@
+﻿@{ Layout = "~/Views/Shared/_MasterPage.cshtml"; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Introduction</title>
+</head>
+<body>
+
+
+    <!-- Main Content Start -->
+    <section id="main-content" class="clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="outer-wrapper clearfix">
+                    <!-- Main Wrapper Start -->
+                    <section id="main-content" class="fbt-blog-single clearfix" style="margin-top:-400px">
+                        <div class="container">
+
+                            <div class="fbt-contact-map">
+                                <div class="map"></div>
+                            </div>
+
+
+                            <div class="fbt-vc-inner hor glr" id="details" style="margin-top: -69px;">
+
+                            </div>
+                            <div class="post-item big sec clearfix">
+                                <div class="row">
+                                    <!-- Post Outer Start -->
+                                    <div class="outer-wrapper fbt-contact clearfix">
+                                        <div class="fbt-col-lg-9 col-md-8 col-sm-6 post-wrapper clearfix">
+
+                                            <!-- Contact Box Start -->
+                                            <div class="fbt-contact-box">
+                                                <div class="title-wrapper">
+                                                    <h2><span>Contact With Us</span></h2>
+                                                </div>
+                                                <form id="contact-form">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <label for="name">Name*</label>
+                                                            <input id="name" name="name" type="text">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="mail">E-mail*</label>
+                                                            <input id="mail" name="mail" type="text">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="website">Website</label>
+                                                            <input id="website" name="website" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <label for="comment">Message*</label>
+                                                    <textarea id="comment" name="comment"></textarea>
+                                                    <button type="submit" id="submit-contact">
+                                                        <i class="fa fa-comment"></i> Send Message
+                                                    </button>
+                                                </form>
+                                            </div><!-- Contact Box End -->
+                                        </div>
+
+                                        <!-- Sidebar Start -->
+                                        <div class="fbt-col-lg-3 col-md-4 col-sm-6 post-sidebar clearfix">
+                                            <!-- Social Counter Start -->
+                                            <div class="widget">
+                                                <div class="social-counter">
+                                                    <div class="title-wrapper border-5">
+                                                        <h2><span class="color-5">Stay Connected</span></h2>
+                                                    </div>
+                                                    <div class="social-item">
+                                                        <div class="social-rss clearfix">
+                                                            <a href="#" class="rss"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                                                            <span class="left">10286 Subscribers</span>
+                                                            <span class="right">RSS</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="social-item">
+                                                        <div class="social-tw clearfix">
+                                                            <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                                            <span class="left">5432 Followers</span>
+                                                            <span class="right">Twitter</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="social-item">
+                                                        <div class="social-gp clearfix">
+                                                            <a href="#" class="g-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                                            <span class="left">750 Followers</span>
+                                                            <span class="right">Google+</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="social-item last clearfix">
+                                                        <div class="social-fb clearfix">
+                                                            <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                            <span class="left">1664 Fans</span>
+                                                            <span class="right">Facebook</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- Social Counter End -->
+                                        </div><!-- Sidebar End -->
+
+                                    </div><!-- Post Outer End -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section><!-- Main Content End -->
+
+    <script src="~/js/plugins/jquery-1.12.3.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/js/plugins/bootstrap.min.js"></script>
+    <script src="~/toast/toastr.min.js"></script>
+    <script src="~/DataManager/AjaxHandler.js"></script>
+    <script src="~/DataManager/Validate.js"></script>
+    <script src="~/MyScripts/website/introduction.js" type="text/javascript"></script>
+</body>
+</html>

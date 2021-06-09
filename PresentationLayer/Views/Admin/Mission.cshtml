@@ -1,0 +1,217 @@
+﻿@{ Layout = "~/Views/Shared/adminMasterView.cshtml"; }
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mission</title>
+</head>
+<body>
+    <!-- BEGIN PAGE BAR -->
+
+
+
+
+    <div class="page-content-wrapper">
+        <!-- BEGIN CONTENT BODY -->
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+
+
+            <div class="alert alert-danger" id="delete" style="display:none;">
+
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
+                <strong>Deleted!</strong> Record Deleted Successfully.
+
+            </div>
+
+
+
+            <div class="page-bar">
+
+                <ul class="page-breadcrumb">
+
+                    <li>
+
+                        <a href="index.php">Dasboard</a>
+
+                        <i class="fa fa-circle"></i>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">Mission List</a>
+
+                        <i class="fa fa-circle"></i>
+
+                    </li>
+
+
+
+                </ul>
+
+                <!--   <div class="page-toolbar">
+
+                      <div class="btn-group pull-right">
+
+                          <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+
+                              <i class="fa fa-angle-down"></i>
+
+                          </button>
+
+                          <ul class="dropdown-menu pull-right" role="menu">
+
+                              <li>
+
+                                  <a href="#">
+
+                                      <i class="icon-bell"></i> Action</a>
+
+                              </li>
+
+                              <li>
+
+                                  <a href="#">
+
+                                      <i class="icon-shield"></i> Another action</a>
+
+                              </li>
+
+                              <li>
+
+                                  <a href="#">
+
+                                      <i class="icon-user"></i> Something else here</a>
+
+                              </li>
+
+                              <li class="divider"> </li>
+
+                              <li>
+
+                                  <a href="#">
+
+                                      <i class="icon-bag"></i> Separated link</a>
+
+                              </li>
+
+                          </ul>
+
+                      </div>
+
+                  </div> -->
+
+            </div>
+
+            <!-- END PAGE BAR -->
+            <!-- BEGIN PAGE TITLE-->
+
+            <h3 class="page-title">
+                PAGE LIST
+
+                <small>INFORMATION</small>
+
+            </h3>
+
+            <!-- END PAGE TITLE-->
+            <!-- END PAGE HEADER-->
+
+            <div class="m-heading-1 border-green m-bordered">
+
+                <div class="btn-group">
+
+                    <a class="btn sbold green" href="mission_add.php"> Add New Page </a>
+
+
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <!-- BEGIN EXAMPLE TABLE PORTLET-->
+
+                    <div class="portlet light bordered">
+
+                        <div class="portlet-title">
+
+                            <div class="caption font-dark">
+
+                                <i class="icon-settings font-dark"></i>
+
+                                <span class="caption-subject bold uppercase">Column Reordering</span>
+
+                            </div>
+                            <div class="tools"> </div>
+                        </div>
+
+                        <div class="portlet-body">
+
+                            <table class="table table-striped table-bordered table-hover" id="sample_1">
+
+                                <thead>
+                                    <tr>
+                                        <td>Title</td>
+                                        <td>Details</td>
+                                        <td>Action</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>MISSION OF DTS </td>
+                                        <td>Through Regulations effective Control and Development of Profession of Travel Agencies, Hotels, Restaurants & Tourist Guides will make sure the quality of services and amenities for tourist in Khyber Pakhtunkhwa.</td>
+                                        <td>
+                                            <a href="mission_edit.php" class="btn btn-warning btn-xs">EDIT</a><a onclick="return confirm('This will delete Page, continue?')" href="admin/Deletepages" class="btn btn-danger btn-xs">Delete</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="odd gradeX">
+                                        <td>MISSION 4</td>
+                                        <td>Through Regulations effective Control and Development of Profession of Travel Agencies, Hotels, Restaurants & Tourist Guides will make sure the quality of services and amenities for tourist in Khyber Pakhtunkhwa.</td>
+                                        <td>
+                                            <a href="mission_edit.php" class="btn btn-warning btn-xs">EDIT</a><a onclick="return confirm('This will delete Page, continue?')" href="admin/Deletepages" class="btn btn-danger btn-xs">Delete</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="odd gradeX">
+                                        <td>MISSION </td>
+                                        <td>Through Regulations effective Control and Development of Profession of Travel Agencies, Hotels, Restaurants & Tourist Guides will make sure the quality of services and amenities for tourist in Khyber Pakhtunkhwa.</td>
+                                        <td>
+                                            <a href="mission_edit.php" class="btn btn-warning btn-xs">EDIT</a><a onclick="return confirm('This will delete Page, continue?')" href="admin/Deletepages" class="btn btn-danger btn-xs">Delete</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="odd gradeX">
+                                        <td> DTS </td>
+                                        <td>Through Regulations effective Control and Development of Profession of Travel Agencies, Hotels, Restaurants & Tourist Guides will make sure the quality of services and amenities for tourist in Khyber Pakhtunkhwa.</td>
+                                        <td>
+                                            <a href="mission_edit.php" class="btn btn-warning btn-xs">EDIT</a><a onclick="return confirm('This will delete Page, continue?')" href="admin/Deletepages" class="btn btn-danger btn-xs">Delete</a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- END CONTENT BODY -->
+
+    </div>
+</body>
+</html>
+

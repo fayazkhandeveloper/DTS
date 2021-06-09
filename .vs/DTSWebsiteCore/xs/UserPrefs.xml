@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{DF89E2E1-9F5D-43BB-ABB8-0317F2967212}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PresentationLayer/PresentationLayer.csproj">
+    <Files>
+      <File FileName="PresentationLayer/appsettings.json" Line="10" Column="6" />
+      <File FileName="PresentationLayer/PresentationLayer.csproj" Line="12" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Option id="ShowAllFiles" value="True" />
+          <Node name="DTSWebsiteCore" expanded="True" selected="True">
+            <Node name="PresentationLayer" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.PresentationLayer PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/fayazkhan/Projects/Vistual Studio/DTS Projects/DTSWebsiteCore/PresentationLayer/Controllers/OnlineServicesController.cs" relfile="PresentationLayer/Controllers/OnlineServicesController.cs" line="51" column="1" />
+      <Breakpoint file="/Users/fayazkhan/Projects/Vistual Studio/DTS Projects/DTSWebsiteCore/PresentationLayer/Repository/HotelsRepo.cs" relfile="PresentationLayer/Repository/HotelsRepo.cs" line="22" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

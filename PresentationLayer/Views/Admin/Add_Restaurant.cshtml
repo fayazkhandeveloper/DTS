@@ -1,0 +1,417 @@
+﻿@{ Layout = "~/Views/Shared/adminMasterView.cshtml"; }
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hotels Booking Now</title>
+    <link rel="icon" href="~/images/hlogo.PNG" />
+
+    <link href="~/toast/toastr.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="page-content-wrapper">
+        <!-- BEGIN CONTENT BODY -->
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <div class="modal-header">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="portlet light bordered" id="form_wizard_1">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class=" icon-layers font-red"></i>
+                                    <span class="caption-subject font-red bold uppercase">
+                                        Add Restaurant
+
+                                    </span>
+                                </div>
+                                <div class="actions">
+                                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                        <i class="icon-cloud-upload"></i>
+                                    </a>
+                                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                        <i class="icon-wrench"></i>
+                                    </a>
+                                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                        <i class="icon-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body form">
+
+                                <form class="form-horizontal" id="submit_form">
+                                    <div class="form-wizard">
+                                        <div class="form-body">
+                                            <ul class="nav nav-pills nav-justified steps">
+                                                <li>
+                                                    <a href="#tab1" data-toggle="tab" class="step">
+                                                        <span class="number"> 1 </span>
+                                                        <span class="desc">
+                                                            <i class="fa fa-check"></i> Restaurant Info
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#tab2" data-toggle="tab" class="step">
+                                                        <span class="number"> 2 </span>
+                                                        <span class="desc">
+                                                            <i class="fa fa-check"></i> Contact
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#tab3" data-toggle="tab" class="step active">
+                                                        <span class="number"> 3 </span>
+                                                        <span class="desc">
+                                                            <i class="fa fa-check"></i> Ficilities
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#tab4" data-toggle="tab" class="step active">
+                                                        <span class="number"> 4 </span>
+                                                        <span class="desc">
+                                                            <i class="fa fa-check"></i> Images
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                @*<li>
+                                                        <a href="#tab5" data-toggle="tab" class="step active">
+                                                            <span class="number"> 5 </span>
+                                                            <span class="desc">
+                                                                <i class="fa fa-check"></i> Videos
+                                                            </span>
+                                                        </a>
+                                                    </li>*@
+
+                                            </ul>
+                                            <div id="bar" class="progress progress-striped" role="progressbar">
+                                                <div class="progress-bar progress-bar-success"> </div>
+                                            </div>
+                                            <div class="tab-content">
+                                                <div class="alert alert-danger display-none">
+                                                    <button class="close" data-dismiss="alert"></button> You have some form errors. Please check below.
+                                                </div>
+                                                <div class="alert alert-success display-none">
+                                                    <button class="close" data-dismiss="alert"></button> Your form validation is successful!
+                                                </div>
+                                                <div class="tab-pane active " id="tab1">
+                                                    <h3 class="block">Provide your Restaurant details</h3>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">
+                                                            Restaurant Name
+                                                            <span class="required"> * </span>
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            <input type="text" id="h_name" class="form-control" name="h_name" required="" placeholder="Restaurant Name" style="text-transform:capitalize;" />
+                                                            <span class="help-block"> Provide your Restaurant Name </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">Provinces</label>
+                                                        <div class="col-md-4">
+                                                            <select name="country_name" id="DDLProvinces" class="form-control" required="" disabled>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">District</label>
+                                                        <div class="col-md-4">
+                                                            <select name="dis" id="DDLDistrict" class="form-control" required>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">Air Condition Type</label>
+                                                        <div class="col-md-4">
+                                                            <select class="form-control" id="DDlRestaurantTypee" title="Area Type">
+                                                                <option value="AC">AC</option>
+                                                                <option value="Non AC">Non AC</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">No of Seats</label>
+                                                        <div class="col-md-4">
+                                                            <select class="form-control" id="DDlRestaurantType" title="Area Type">
+                                                                <option value="1-25">1-25</option>
+                                                                <option value="25-50">25-50</option>
+                                                                <option value="50-75">50-75</option>
+                                                                <option value="75-100">75-100</option>
+                                                                <option value="Above-100">Above-100</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">Description</label>
+                                                        <div class="col-md-4">
+                                                            <textarea class="form-control" rows="3" id="remarks" name="remarks"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="tab2">
+                                                    <h3 class="block">Provide your Info details</h3>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">
+                                                            Address
+                                                            <span class="required"> * </span>
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control" id="address" name="address" style="text-transform:capitalize;" />
+                                                            <span class="help-block"> Provide your street address </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">
+                                                            Email ID
+                                                            @*<span class="required"> * </span>*@
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            <input type="email" class="form-control" id="email" name="email" />
+                                                            <span class="help-block"> Provide your email Address </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">
+                                                            Website
+                                                            @*<span class="required"> * </span>*@
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control" id="website" name="website" />
+                                                            <span class="help-block"> Provide your Website </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">
+                                                            Phone Number
+                                                            <span class="required"> * </span>
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control" id="phone" name="phone" />
+                                                            <span class="help-block"> Provide your phone number </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">
+                                                            Mobile Number
+                                                            @*<span class="required"> * </span>*@
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control" id="mobile" name="mobile" />
+                                                            <span class="help-block"> Provide your mobile number </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">
+                                                            Fax No
+                                                            @*<span class="required"> * </span>*@
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control" id="fax" name="fax" />
+                                                            <span class="help-block"> Provide your Fax No  </span>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </div>
+                                                <div class="tab-pane " id="tab3">
+                                                    <h3 class="block">Provide your Facility details</h3>
+
+
+                                                    <div class="table-responsive panel">
+                                                        <table class="table" id="tblscope">
+                                                            <tbody>
+
+                                                                <tr>
+                                                                    <td width="200px" class="text-success"><i class="fa fa-wifi"></i> WI_FI</td>
+                                                                    <td width="200px">
+                                                                        <input name="wifi" id="wifi" type="checkbox" class="form-control" />
+                                                                    </td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> SWIMMING POOL</td>
+                                                                    <td width="200px"><input name="swimming_pool" id="swimming_pool" type="checkbox" class="form-control" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> TELEVISION</td>
+                                                                    <td width="200px"><input name="tv" type="checkbox" id="tv" class="form-control" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="200px" class="text-success"><i class="fa fa-coffee"></i> COFFEE</td>
+                                                                    <td width="200px"><input name="coffee" id="coffee" type="checkbox" class="form-control" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> AIR CONDITIONINGL</td>
+                                                                    <td width="200px"><input name="air_condition" id="air_condition" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> FITNESS FACILITY</td>
+                                                                    <td width="200px"><input name="fitness" id="fitness" type="checkbox" class="form-control" id="" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="200px" class="text-success"><i class="fa fa"></i> FRIDGE</td>
+                                                                    <td width="200px"><input name="frigde" id="frigde" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> WINE BAR</td>
+                                                                    <td width="200px"><input name="wine" id="wine" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> SMOKING ALLOWED</td>
+                                                                    <td width="200px"><input name="smoking" id="smoking" type="checkbox" class="form-control" id="" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="200px" class="text-success"><i class="fa fa"></i> ENTERTAINMENT</td>
+                                                                    <td width="200px"><input name="entertainment" id="entertainment" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> SECURE VAULT</td>
+                                                                    <td width="200px"><input name="secure" id="secure" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> PICK AND DROP</td>
+                                                                    <td width="200px"><input name="pick" id="pick" type="checkbox" class="form-control" id="" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="200px" class="text-success"><i class="fa "></i> ROOM SERVICE</td>
+                                                                    <td width="200px"><input name="service" id="service" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> PETS ALLOWED</td>
+                                                                    <td width="200px"><input name="pets" id="pets" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> PLAY PLACE</td>
+                                                                    <td width="200px"><input name="play" id="play" type="checkbox" class="form-control" id="" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> COMPLIMENTARY BREAKFAST</td>
+                                                                    <td width="200px"><input name="breakfast" id="breakfast" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> FREE PARKING</td>
+                                                                    <td width="200px"><input name="parking" id="parking" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> CONFERENCE ROOM</td>
+                                                                    <td width="200px"><input name="conference" id="conference" type="checkbox" class="form-control" id="" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="200px" class="text-success"><i class="fa fa"></i> FIRE PLACE</td>
+                                                                    <td width="200px"><input name="fire" id="fire" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> HANDICAP ACCESSIBLE</td>
+                                                                    <td width="200px"><input name="handicap" id="handicap" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> DOORMAN</td>
+                                                                    <td width="200px"><input name="doorman" id="doorman" type="checkbox" class="form-control" id="" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="200px" class="text-success"><i class="fa "></i> HOT TUB</td>
+                                                                    <td width="200px"><input name="hot_tub" id="hot_tub" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> ELEVATOR IN BUILDING</td>
+                                                                    <td width="200px"><input name="elevator" id="elevator" type="checkbox" class="form-control" id="" /></td>
+                                                                    <td width="200px" class="text-success"><i class="fa"></i> SUITABLE FOR EVENTS</td>
+                                                                    <td width="200px"><input name="events" id="events" type="checkbox" class="form-control" id="" /></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane " id="tab4">
+                                                    <h3 class="block">Provide your Restaurant Images</h3>
+                                                    <div class="table-responsive panel">
+                                                        <table class="table" id="tblImages">
+                                                            <thead>
+                                                                <tr>
+                                                                    @*<td width="186"> <label>Image Title</label></td>*@
+                                                                    <td width="235"><label>Select Image</label></td>
+                                                                    @*<td width="218"><label>Description</label></td>*@
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    @*<td><input type="text" id="image_title1" name="image_title" class="form-control" /></td>*@
+                                                                    <td width="523"><input type='file' id="Images1" multiple="true" class="form-control" name="image_src[]" /></td>
+                                                                    @*<td>
+
+                                                                            <img id="Imgimages"  class="img-responsive" src="~/images/contact_info.png" style="width: 200px; height: 100px" />
+                                                                        </td>*@
+                                                                    @*<td><textarea id="image_detail1" name="image_detail" class="form-control"></textarea></td>*@
+                                                                </tr>
+                                                            </tbody>
+                                                            <table id="view_image" class="table"></table>
+                                                            <tr>
+                                                                <td colspan="3"> <input name="add" type="button" value="More Images" id="addimage" class="btn btn-primary" /> </td>
+
+
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                                @*<div class="tab-pane " id="tab5">
+                                                        <h3 class="block">Provide your Restaurant Images</h3>
+                                                        <div class="col-md-6 col-md-offset-3">
+                                                            <div class="table-responsive panel">
+                                                                <table class="table">
+                                                                    <tr>
+                                                                        <td width="186"> <label>Upload Vedio</label></td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><input type='file' multiple="true" class="form-control" name="image_src[]" /></td>
+                                                                        <table id="view_image" class="table">
+                                                                        </table>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>*@
+                                            </div>
+                                            <div class="form-actions">
+                                                <div class="row">
+                                                    <div class="col-md-offset-3 col-md-9">
+                                                        <a href="javascript:;" class="btn default button-previous">
+                                                            <i class="fa fa-angle-left"></i> Back
+                                                        </a>
+                                                        <a href="javascript:;" class="btn btn-outline green button-next">
+                                                            Continue
+                                                            <i class="fa fa-angle-right"></i>
+                                                        </a>
+
+                                                        <div class="form-actions">
+                                                            <div class="row">
+                                                                <div class="col-md-offset-2 col-md-9">
+                                                                    <button type="button" id="btnSave" class="btn green button-submit" style="margin-top: -55px;">Save</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="page-footer">
+        <div class="page-footer-inner">
+            2014 &copy; Metronic by keenthemes.
+            <a href="../../../../../www.themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469_0F909471" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+        </div>
+        <div class="scroll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
+    </div>
+    <script src="~/js/plugins/jquery-1.12.3.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/js/plugins/bootstrap.min.js"></script>
+    <script src="~/toast/toastr.min.js"></script>
+    <script src="~/DataManager/AjaxHandler.js"></script>
+    <script src="~/DataManager/Validate.js"></script>
+    <script src="~/MyScripts/Admin/Add_Restaurant.js" type="text/javascript"></script>
+
+</body>
+
+</html>
+
